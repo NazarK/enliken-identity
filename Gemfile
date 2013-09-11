@@ -48,3 +48,4 @@ gem 'rails_admin', :branch => "rails-3.x"
 
 gem "devise"
 gem 'thin'
+gem 'rails_12factor'
