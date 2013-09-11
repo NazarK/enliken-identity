@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "COMMITING CODE"
+git add .
+git commit -am "$1"
+
+echo "PUSHING TO GITHUB IN BACKGROUND"
+git push github master&
+
+echo "PUSHING MASTER TO HEROKU"
+git push heroku master
+
+
