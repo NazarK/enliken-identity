@@ -44,7 +44,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem 'rails_admin'
+gem 'rails_admin', :branch => "rails-3.x"
 
 gem "devise"
 gem 'thin'
