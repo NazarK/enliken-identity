@@ -1,3 +1,123 @@
-enliken identity
-
-<a href=/users/sign_in>sign in</a>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Enliken-Identity</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+  
+    <!-- Add your site or application content here --> 
+    <div id="main-content">
+      <header>
+        <h1>
+          So you want to see your data? <br>
+          We'll need you to verify your identity in one of four ways.
+        </h1>
+      </header>
+      <div id="auth-area">
+        <div id='button-box'>
+          <a href="#email"><div class="auth-method-button">Email</div></a>
+          <a href="#phone"><div class="auth-method-button">Phone</div></a>
+          <a href="#facebook"><div class="auth-method-button">Facebook</div></a>
+          <a href="#questions"><div class="auth-method-button">Secret Questions</div></a>
+        </div>    
+        <!-- Authentication actions will appear in here dynamically-->
+        <div class="auth-protocol-box">
+        
+          <div class="protocol start-hidden" id="email">
+            <div class="step-one">
+              <form name="email">
+                Ok, please enter your email address:<br>
+                <input type="email" name="email">
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+            <div class="step-two start-hidden">
+              <span>Please click the link in the email we sent you to confirm.<br></span>
+              <a href="#email" id="step-back">Step backward.</a>
+            </div>          
+          </div>
+          
+          <div class="protocol start-hidden" id="phone">
+            <div class="step-one">
+              <form name="phone">
+                Coming soon...<br><br>
+                Please enter your phone number:<br>
+                <input type="tel" name="email">
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+            <div class="step-two start-hidden">
+              <form name="text-pin">
+                Enter the pin we texted you to proceed.<br>
+                <input type="number" min="0" max="9" name="first">
+                <input type="number" min="0" max="9" name="second">
+                <input type="number" min="0" max="9" name="third">
+                <input type="number" min="0" max="9" name="fourth">
+                <input type="submit" value="Submit"><br> 
+              </form>
+              <a href="#phone" id="step-back">Step backward.</a>
+            </div>
+          </div>
+          
+          <div class="protocol start-hidden" id="facebook">
+            Connect with Facebook coming soon.
+          </div>
+          
+          <div class="protocol start-hidden" id="questions">
+            <div class="step-one">
+              <form name="questions">
+                Coming soon...<br><br>
+                Ok, please enter your name so we can find your secret question:<br>
+                First Name: <input type="text" name="firstname"><br>
+                Last Name: <input type="text" name="lastname"><br>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+            <div class="step-two start-hidden">
+              <form name="answers">
+                <span>Answer the question to confirm your identity.</span><br>
+                <span id="question">What is the name of Marc's pet dog?</span><br>
+                <input type="text" name="answer">
+                <input type="submit" value="Submit"><br>
+              </form>
+              <a href="#questions" id="step-back">Step backward.</a>
+            </div>  
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer starts here -->
+    <footer>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+      <script src="/js/plugins.js"></script>
+      <script src="/js/main.js"></script>
+      
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+      <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script>
+    </footer>
+  </body>
+</html>

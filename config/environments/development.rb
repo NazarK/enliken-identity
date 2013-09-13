@@ -35,3 +35,5 @@ Identity::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 end
+
+APP_HOST = "localhost:3000"
